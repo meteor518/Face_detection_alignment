@@ -1,9 +1,9 @@
 # Face detection and alignment by mtcnn
+Using the pre-model of the trained MTCNN, face detection and  alignment are performed on the input image, and the output is the aligned face image(112 * 112).
 
-* `detect.py`
+* The model and detection code in `FaceDetection` directory
 
-  > pyseeta检测人脸，剪裁并保存
-
+* The main code: `detect.py`: The code includs image augmentation operations
   ```shell
-  python3 ../val_data_preprocess/detect.py -i ./testset/ -o ./testset_aligned -j 8 -r 0.25,0.5,1
+  python detect.py -i ./testset/(your images path) -o ./testset_aligned -j 8 -r 0.25,0.5,1(-r is for image augmentation)
   ```
